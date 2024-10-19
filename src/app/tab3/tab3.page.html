@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="chevron-back-circle-outline" (click)="fngoback()"></ion-icon> Slide
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <swiper-container #swiper2 (swiperslidechange)="onslideChange2($event)" [spaceBewteen]="1" effect="cards">
+    <swiper-slide *ngFor="let item of cardArray2;let i=index;">
+      <ion-card>
+        <img alt="Silhouette of mountains" class="imageclss" src="assets/img{{i+1}}.jpg" />
+        <ion-card-header>
+          <ion-card-title>{{item.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{item.description}}
+        </ion-card-content>
+        <ion-item color="light">
+          <ion-icon (click)="fnYes('short')" name="star-outline" slot="start"></ion-icon>
+          <ion-label>shortlist</ion-label>
+          <ion-label slot="end">Like Her?</ion-label>
+          <ion-icon name="close-outline" slot="end" (click)="fnYes('no')" class="removeList"></ion-icon>
+          <ion-icon name="checkmark-outline" (click)="fnYes('yes')" slot="end" class="tickList"></ion-icon>
+        </ion-item>
+
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+    <ion-toast [isOpen]="isToastOpen" message="Interested" [duration]="2000" (didDismiss)="fnYesclose(false)"
+    position="bottom" positionAnchor="header" class="custom-toast"></ion-toast>
+
+
+</ion-content>

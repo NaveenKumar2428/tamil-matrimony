@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <swiper-container #swiper (swiperslidechange)="onslideChange($event)" [spaceBetween]="1" [initialSlide]="slideIndex"
+    effect="coverflow">
+    <swiper-slide *ngFor="let item of cardArray; let i = index;">
+      <ion-card>
+        <img (click)="fnclick(i, item)" alt="Silhouette of mountains" class="imageclss" src="assets/img{{i + 1}}.jpg" />
+        <ion-card-header>
+          <ion-card-title>{{ item.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ item.description }}
+        </ion-card-content>
+        <ion-button fill="clear" class="yesbtn" (click)="fnYes(true)">Yes</ion-button>
+        <ion-button fill="clear" class="nobtn" (click)="fnYes(false)">No</ion-button>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+  <ion-toast [isOpen]="isToastOpen" message="Interested" [duration]="2000" (didDismiss)="fnYesclose(false)"
+    position="bottom" positionAnchor="header" class="custom-toast"></ion-toast>
+</ion-content>

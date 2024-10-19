@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="chevron-back-circle-outline" (click)="fngoback()"></ion-icon> View Profile
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="fnNavtoslide()" class="shortlist"><ion-icon
+          name="notifications-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-card style="height: auto;" *ngIf="profileView!=''">
+      <img alt="Silhouette of mountains" class="imageclss" src="assets/{{profileView.img}}.jpg" />
+      <ion-card-header>
+        <ion-card-title>{{profileView.name}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{profileView.description}}
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>

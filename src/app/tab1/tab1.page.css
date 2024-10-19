@@ -1,0 +1,69 @@
+.imageclss {
+  height: 58vh;
+  width: 100%;
+}
+
+ion-card {
+  background: white !important;
+  height: auto;
+  border-radius: 20px;
+}
+
+
+.yesbtn {
+  border: 2px solid orange;
+  color: white;
+  background-color: orange;
+  border-radius: 15px;
+}
+
+.nobtn {
+  border: 2px solid rgb(189, 189, 189);
+  color: grey;
+  background-color: white;
+  border-radius: 15px;
+}
+
+ion-toast.custom-toast {
+  --background: #78ed74;
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: #ffffff;
+}
+
+ion-toast.custom-toast::part(message) {
+  text-align: center;
+}
+
+ion-title {
+  --color: #ffffff;
+  text-align: left;
+}
+
+ion-toolbar {
+  --background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(120, 120, 228) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.green-toast {
+  background-color: green;
+  color: white;
+  margin-right: 16px;
+}
+
+.red-toast {
+  background-color: red;
+  color: white;
+  margin-right: 16px;
+}
+
+
+@media only screen and (min-width: 600px) {
+  ion-body {
+    background-color: lightblue !important;
+  }
+  ion-card{
+      width: 400px;
+      max-width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}

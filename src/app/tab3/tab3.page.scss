@@ -1,0 +1,81 @@
+.imageclss{
+    height: 58vh;
+    width: 100%;
+}
+:host {
+    background-color: #f0f0f0;
+  }
+  ion-card{
+    background: white !important;
+    height: auto;
+    border-radius: 20px;
+}
+ion-item{
+    background-color: white !important;
+}
+swiper-slide {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 20px !important;
+    background: none;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: #fff !important;
+  }
+  :host ::ng-deep .swiper-slide-prev{
+    background: none !important;
+  }
+  :host ::ng-deep  .swiper-slide-next{
+    background: none !important;
+  }
+  :host ::ng-deep .swiper-slide-active{
+    background: none !important;
+  }
+  :host ::ng-deep .swiper-slide-fully-visible .swiper-slide-active .swiper-slide-prev  .swiper-slide-active{
+    background: none !important;
+  }
+@media only screen and (min-width: 600px) {
+    ion-body {
+      background-color: lightblue !important;
+    }
+    ion-card{
+        width: 400px;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+  ion-title {
+    --color: #ffffff;
+  }
+  
+  ion-toolbar {
+    --background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(120, 120, 228) 0%, rgba(0,212,255,1) 100%);
+  }
+
+  .removeList {
+    border: 1px solid gray;
+    border-radius: 20px;
+ }
+ .tickList {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: orange;
+    color: white;
+ }
+  
+ ion-toast.customgreen {
+    --background: #78ed74;
+    --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+    --color: #ffffff;
+  }
+ ion-toast.customred {
+    --background: #ff2e2e;
+    --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+    --color: #ffffff;
+  }
+  ion-toast.custom-toast::part(message) {
+    text-align: center;
+  }

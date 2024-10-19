@@ -1,0 +1,28 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-row>
+          <ion-col class="pt-4 pb-4">
+              <ion-title class="logo-title">
+                  <img src="https://imgs.tamilmatrimony.com/bmimgs/new-logo/tamil-matrimony-logo.png" alt="App Logo" />
+              </ion-title>
+          </ion-col>
+  
+          <ion-col class="pt-4 pb-4 menu">
+              <div class="menu-items">
+                  <ion-buttons>
+                    <ion-button routerLink="/tabs/tab1" fill="clear">Home</ion-button>
+                    <ion-button routerLink="/tabs/tab1" fill="clear">Matches</ion-button>
+                    <ion-button routerLink="/mailbox" fill="clear">Mailbox</ion-button>
+                    <ion-button routerLink="/chat" fill="clear">Chat</ion-button>
+                    <ion-button routerLink="/tabs/tab3" fill="clear">Notification</ion-button>
+                  </ion-buttons>
+              </div>
+          </ion-col>
+      </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
